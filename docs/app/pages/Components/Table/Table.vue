@@ -8,6 +8,7 @@
 <example src="./examples/TableSingle.vue" />
 <example src="./examples/TableMultiple.vue" />
 <example src="./examples/TablePaginationSoon.vue" />
+<example src="./examples/TableFooter.vue" />
 
 <template>
   <page-container centered :title="$t('pages.table.title')">
@@ -83,6 +84,11 @@
     </div>
 
     <div class="page-container-section">
+      <p>Footer slot allows us to add extra row, that doesn't have to be in a scope. It can be used for summary data and so on. However, there is a need to pass regular html tags instead of vue-material's table components in order to render correctly.</p>
+      <code-example title="Footer Table" :component="examples['table-footer']" />
+    </div>
+
+    <div class="page-container-section">
       <h2>Selection</h2>
 
       <p>When dealing with large data sets, you may want to have quick actions over our data, like whether to remove or make some bulk change. Tables have inner selection in two ways: Single and Multiple.</p>
@@ -94,7 +100,7 @@
       <p>Multiple selections great for bulk changes and you can use the alternate header to hold the options that you can call when there are options selected. Note that if you click on the checkbox or on the entire row, it will do the same action due to <code>md-auto-select</code> option. Really handy:</p>
       <code-example title="Multiple" :component="examples['table-multiple']" />
     </div>
-
+    
     <div class="page-container-section">
       <p>The table pagination will create the mechanism to show contents through pages. This component will be available soon. :)</p>
       <code-example title="Pagination" :component="examples['table-pagination-soon']" />

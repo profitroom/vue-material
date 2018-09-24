@@ -33,6 +33,7 @@
             :md-item="item">
             <slot name="md-table-row" :item="item" />
           </md-table-row-ghost>
+          <slot name="md-table-footer-row" />
         </tbody>
 
         <tbody v-else-if="$scopedSlots['md-table-empty-state']">
