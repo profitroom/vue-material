@@ -33,7 +33,8 @@
     "release": "sh build/release.sh",
     "new-component": "babel-node build/new-component.js",
     "github-release": "github-release",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepare": "yarn build"
   },
   "engines": {
     "node": ">= 7.0"
