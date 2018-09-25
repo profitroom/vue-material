@@ -3,6 +3,7 @@
 <example src="./examples/DisabledSelect.vue" />
 <example src="./examples/OptgroupSelect.vue" />
 <example src="./examples/MultipleSelect.vue" />
+<example src="./examples/PreventCloseSelect.vue" />
 
 <template>
   <page-container centered :title="$t('pages.select.title')">
@@ -28,6 +29,9 @@
 
       <p>It is really easy to disable a select, option and even an optgroup. This will prevent them from being selected. Just pass a <code>disabled</code> prop to the desired component:</p>
       <code-example title="Disabled" :component="examples['disabled-select']" />
+
+      <p>It is also easy to prevent closing select after clicking in a specific option. It really helps if you want to add special functionality on specific option. For exemple, you want to trigger an action to show something first and after that trigger select</p>
+      <code-example title="Prevent Closing" :component="examples['prevent-close-select']" />
 
       <api-item title="API - md-select">
         <p>The following options can be applied to any select:</p>

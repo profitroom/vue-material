@@ -216,10 +216,10 @@
           this.localValue = this.arrayAccessorRemove(this.localValue, index)
         }
       },
-      setValue (newValue) {
+      setValue (newValue, preventClose = false) {
         this.model = newValue
         this.setFieldValue()
-        this.showSelect = false
+        this.showSelect = preventClose
       },
       setContent (newLabel) {
         this.MdSelect.label = newLabel
