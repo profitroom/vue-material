@@ -51,6 +51,10 @@
 
     if (props.disabled) {
       return MdListItemButton
+      }
+
+    if (props.noButton) {
+      return MdListItemFakeButton
     }
 
     if (isRouterLink(parent, props)) {

@@ -21,7 +21,7 @@
         <md-select v-model="country" name="country" id="country">
           <md-option value="australia">Australia</md-option>
           <md-option value="brazil" disabled>Brazil</md-option>
-          <md-option value="japan">Japan</md-option>
+          <md-option value="japan" no-button>Japan🇯🇵</md-option>
           <md-option value="united-states">United States</md-option>
         </md-select>
       </md-field>

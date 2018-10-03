@@ -7,11 +7,15 @@ export default {
     MdListItemContent
   },
   props: {
-    disabled: Boolean
+    disabled: Boolean,
+    noButton: Boolean
   },
   computed: {
     isDisabled () {
       return !this.mdRipple || this.disabled
+    },
+    isNoButton() {
+      return !this.mdRipple || this.noButton
     }
   }
 }

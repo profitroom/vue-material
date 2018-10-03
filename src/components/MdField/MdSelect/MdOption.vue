@@ -1,5 +1,11 @@
 <template>
-  <md-menu-item :class="optionClasses" :disabled="isDisabled" :preventClose="shouldPreventClose" @click="setSelection">
+  <md-menu-item
+    :class="optionClasses"
+    :disabled="isDisabled"
+    :noButton="isNoButton"
+    :preventClose="shouldPreventClose"
+    @click="setSelection"
+  >
     <md-checkbox class="md-primary" v-model="isChecked" v-if="MdSelect.multiple" :disabled="isDisabled" />
 
     <span class="md-list-item-text" ref="text">
@@ -16,7 +22,8 @@
     props: {
       value: [String, Number, Boolean],
       disabled: Boolean,
-      preventClose: Boolean
+      preventClose: Boolean,
+      noButton: Boolean
     },
     inject: {
       MdSelect: {},
@@ -38,6 +45,9 @@
       },
       isDisabled () {
         return this.MdOptgroup.disabled || this.disabled
+      },
+      isNoButton () {
+        return this.MdOptgroup.noButton || this.noButton
       },
       shouldPreventClose () {
         return this.MdOptgroup.preventClose || this.preventClose

@@ -4,6 +4,7 @@
 <example src="./examples/OptgroupSelect.vue" />
 <example src="./examples/MultipleSelect.vue" />
 <example src="./examples/PreventCloseSelect.vue" />
+<example src="./examples/NoButtonOption.vue" />
 
 <template>
   <page-container centered :title="$t('pages.select.title')">
@@ -29,6 +30,9 @@
 
       <p>It is really easy to disable a select, option and even an optgroup. This will prevent them from being selected. Just pass a <code>disabled</code> prop to the desired component:</p>
       <code-example title="Disabled" :component="examples['disabled-select']" />
+
+      <p>If you don't want to render button as an option provide <code>no-button</code> prop. Sometimes you might want to put an input within li, having that option you can avoid passing event issues and write more semantic code</p>
+      <code-example title="No button option" :component="examples['no-button-option']" />
 
       <p>It is also easy to prevent closing select after clicking in a specific option. It really helps if you want to add special functionality on specific option. For exemple, you want to trigger an action to show something first and after that trigger select</p>
       <code-example title="Prevent Closing" :component="examples['prevent-close-select']" />
